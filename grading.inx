@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Grading</_name>
+    <id>org.inkscape.grading_plugin</id>
+    
+    <dependency type="executable" location="extensions">inkex.py</dependency>
+    <dependency type="executable" location="extensions">simpletransform.py</dependency>
+    <dependency type="executable" location="extensions">grading.py</dependency>
+       
+    <param name="in_length" type="float" precision="3" min="0" max="350" _gui-text="Input length"></param>
+    <param name="in_width" type="float" precision="3" min="0" max="350" _gui-text="Input width"></param>
+    <param name="in_size" type="int" min="36" max="46" _gui-text="Input size">39</param>
+    <param name="out_min_size" type="int" min="36" max="46" _gui-text="Output min size">36</param>
+    <param name="out_max_size" type="int" min="36" max="46" _gui-text="Output max size">46</param>    
+    <param name="hor_dist" type="int" min="0" max="200" _gui-text="Horizontal translation distance">100</param>
+    
+    <effect>
+          <object-type>all</object-type>
+          <effects-menu>
+                <submenu _name="Grading tools" />
+          </effects-menu>
+    </effect>
+    
+    <script>
+         <command reldir="extensions" interpreter="python">grading.py</command>
+    </script>
+    
+</inkscape-extension>
